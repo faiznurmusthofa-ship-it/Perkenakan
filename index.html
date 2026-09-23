@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perkenalan | Faiz Nur Musthofa</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      background:
+        radial-gradient(circle at 15% 20%, #263b68 0%, transparent 35%),
+        radial-gradient(circle at 85% 80%, #3b205c 0%, transparent 35%),
+        #080b18;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Bintang di langit */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(#aaaaff 1px, transparent 1px);
+      background-size: 90px 90px, 150px 150px;
+      background-position: 10px 20px, 50px 80px;
+      opacity: 0.25;
+    }
+
+    header {
+      text-align: center;
+      padding: 35px 20px 10px;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 30px;
+      color: #a9c9ff;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #bfc8df;
+      font-size: 15px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 850px;
+      margin: 25px auto 40px;
+      position: relative;
+    }
+
+    /* Kartu profil */
+    .profile-card {
+      background: rgba(20, 27, 52, 0.88);
+      border: 1px solid rgba(150, 180, 255, 0.25);
+      border-radius: 25px;
+      padding: 35px 25px;
+      text-align: center;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(10px);
+    }
+
+    .avatar {
+      width: 115px;
+      height: 115px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4267d5, #8c4ddf);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      font-weight: bold;
+      border: 4px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 30px rgba(100, 120, 255, 0.3);
+    }
+
+    .profile-card h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .profile-card .subtitle {
+      color: #aab9dc;
+      margin-bottom: 20px;
+    }
+
+    .bio {
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.8;
+      color: #d5dbed;
+    }
+
+    /* Bagian hobi */
+    .section-title {
+      text-align: center;
+      font-size: 25px;
+      color: #a9c9ff;
+      margin: 35px 0 20px;
+    }
+
+    .hobbies {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .hobby-card {
+      background: rgba(24, 32, 60, 0.9);
+      border: 1px solid rgba(150, 180, 255, 0.2);
+      border-radius: 18px;
+      padding: 25px 12px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .hobby-card:hover {
+      transform: translateY(-6px);
+      border-color: #779cff;
+      box-shadow: 0 8px 25px rgba(70, 100, 220, 0.2);
+    }
+
+    .hobby-icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .hobby-card h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .hobby-card p {
+      color: #aeb9d5;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* Sosial media */
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .instagram {
+      background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+    }
+
+    .tiktok {
+      background: #161616;
+      border: 1px solid #444;
+    }
+
+    .social-btn:hover {
+      transform: scale(1.05);
+      filter: brightness(1.15);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #8290b4;
+      font-size: 13px;
+      position: relative;
+    }
+
+    /* Tampilan HP */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 25px;
+      }
+
+      .profile-card h2 {
+        font-size: 24px;
+      }
+
+      .hobbies {
+        grid-template-columns: 1fr;
+      }
+
+      .hobby-card {
+        padding: 20px;
+      }
+
+      .socials {
+        flex-direction: column;
+      }
+
+      .social-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>✨ My Personal Website</h1>
+    <p>Selamat datang di halaman perkenalanku!</p>
+  </header>
+
+  <main class="container">
+
+    <!-- PROFIL -->
+    <section class="profile-card">
+      <div class="avatar">FN</div>
+
+      <h2>Faiz Nur Musthofa</h2>
+
+      <p class="subtitle">👋 Halo, perkenalkan namaku Faiz!</p>
+
+      <p class="bio">
+        Aku adalah seseorang yang suka mengeksplorasi hal-hal baru.
+        Aku memiliki beberapa hobi seperti menggambar, menonton anime,
+        dan bermain game. Website ini dibuat untuk memperkenalkan diriku
+        secara singkat. Selamat datang!
+      </p>
+    </section>
+
+    <!-- HOBI -->
+    <h2 class="section-title">🎨 Hobiku</h2>
+
+    <section class="hobbies">
+
+      <div class="hobby-card">
+        <div class="hobby-icon">🎨</div>
+        <h3>Menggambar</h3>
+        <p>
+          Aku suka menggambar dan menuangkan
+          ide serta imajinasiku melalui karya seni.
+        </p>
+      </div>
+
+      <div class="hobby-card">
+        <div class="hobby-icon">🍿</div>
+        <h3>Menonton Anime</h3>
+        <p>
+          Aku suka menonton anime dengan berbagai
+          cerita, karakter, dan dunia yang menarik.
+        </p>
+      </div>
+
+      <div class="hobby-card">
+        <div class="hobby-icon">🎮</div>
+        <h3>Bermain Game</h3>
+        <p>
+          Aku suka bermain game untuk hiburan,
+          tantangan, dan mengisi waktu luang.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- SOSIAL MEDIA -->
+    <h2 class="section-title">📱 Temukan Aku</h2>
+
+    <section class="socials">
+
+      <a
+        class="social-btn instagram"
+        href="https://www.instagram.com/faiznur144?stkn=MTFhNGZrMGYxdno5aQ=="
+        target="_blank"
+        rel="noopener noreferrer">
+        📸 Instagram
+      </a>
+
+      <a
+        class="social-btn tiktok"
+        href="https://www.tiktok.com/@faiz01529?_r=1&_t=ZS-99xTBJBnUZQ"
+        target="_blank"
+        rel="noopener noreferrer">
+        🎵 TikTok
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Faiz Nur Musthofa — Dibuat dengan HTML & CSS 💙
+  </footer>
+
+</body>
+</html>
